@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+	 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+ 
+<style>
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/frame2.jpg');
+  background-size: cover; /* Ensures full coverage */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-position: Center; /* Centers the background image */
+  opacity: 0.8; /* Adjust the opacity here */
+  z-index: -1; /* Push this layer behind the content */
+  filter: brightness(0.5); /* Optional: Adjust brightness for better blending */
+  
+}
+
+    header {
+	background-image: url("images/header2.PNG"); 
+    background-position: center;
+	background-size: 140%;
+	display: flex ;
+	justify-content: space-between;
+	align-items: center;
+    line-height: 0%;
+	}
+  h1 {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 0;
+	width: 10%;
+	}
+  h1 img { 
+	max-width: 200%;
+	height: auto;
+	border: 0;
+	padding: 0;
+	margin-left: 20px;
+	position: relative;
+	}
+  nav {
+	display: flex;
+	}
+  nav li {
+	font-family: 'Unkempt', sans-serif;
+	margin-right: 30px;
+    }
+  nav ul {
+	display: flex;
+	list-style: none;
+	padding-top: 20px;
+  }
+  nav a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #824006;
+	}
+  .search-bar {
+	background-color: white;
+    padding: 0px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-right: 1em;
+	margin-top: 15px;
+	margin-bottom: 21px;
+	border-style: none;
+    outline: none;
+	border-bottom: 0px solid #ccc;
+  }
+  .search-bar input {
+	border: none;
+	outline: none;
+	}
+  .search-bar button {
+	background-color: red;
+	color: white;
+	border: none;
+	padding: 5px;
+	border-radius: 0 5px 5px 0;
+	}
+  .nav2 {
+	display: center;
+	
+	}
+  .navi {
+	padding-right: 160px;
+	}
+  .navi ul {
+	display: flex;
+	list-style: none;
+	margin-left: 20px;
+	}
+  .navi li {
+	font-family: 'Unkempt', sans-serif;
+	font-size: 20px;
+	margin-right: 30px;
+	}
+  .navi a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #824006;
+	}
+
+
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) { display: none; } /* Hide all links except the first one */
+    .topnav a.icon { float: right; display: block; } /* Show the hamburger icon */
+}
+
+.topnav.responsive { position: relative; }
+
+.topnav.responsive .icon { position: absolute; right: 0; top: 0; }
+
+.topnav.responsive a {
+    float: none; /* Stack links vertically */
+    display: block;
+    text-align: left; /* Align text to the left */
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+
+
+#about-mission-vision {
+    background-color: #219EBC; /* Light background for contrast */
+    padding: 40px 20px; /* Padding around the container */
+    border: 2px solid #4CAF50; /* Green border around the container */
+    border-radius: 10px; /* Rounded corners */
+    margin-top: 20px; /* Space above the container */
+}
+
+.content-container {
+    max-width: 800px; /* Limit the width of the content */
+    margin: auto; /* Center the content */
+}
+
+.content-container h2 {
+    text-align: center; /* Center headings */
+    color: #333; /* Darker color for better readability */
+}
+
+.content-container p {
+    font-size: 1.1em; /* Slightly larger font size for paragraph text */
+    color: black; /* Softer color for paragraph text */
+    margin-bottom: 30px; /* Space below paragraph */
+}
+
+.mission-vision-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between items */
+}
+
+.mission-item, .vision-item {
+    flex: 1; /* Take equal space */
+    background-color: #e0f7fa; /* Light blue background for items */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
+}
+
+.mission-item h3, .vision-item h3 {
+   margin-top: 10px; 
+   color: #4CAF50; /* Consistent theme color */
+   text-align: center; /* Centered text */
+   font-size: 1.5em; /* Larger font size for headings */
+}
+
+.mission-item i, .vision-item i {
+   font-size: 50px; /* Larger icons for better visibility */
+   color: #023047; 
+   display: block; 
+   margin-bottom: 15px; 
+   text-align: center; /* Centered icons */
+}
+
+/* Separator styles */
+.separator {
+    width: 2px; /* Width of the separator line */
+    background-color: #ccc; /* Color of the separator line */
+    margin: auto; /* Center the separator vertically between items */
+} 
+
+.calendar-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for contrast */
+    padding: 20px; /* Padding around the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-top: 20px; /* Space above the container */
+}
+
+#calendar-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between controls */
+    margin-bottom: 20px; /* Space below controls */
+}
+
+#calendar-controls button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px; 
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+}
+
+#calendar-controls button:hover {
+    background-color: #45a049; /* Darker shade on hover */
+}
+
+#calendar-content {
+    margin-top: 20px; 
+}
+
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity for background */
+}
+
+.modal-content {
+    background-color: #fff; /* White background for modal content */
+    margin: 15% auto; /* Centered vertically and horizontally */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    max-width: 500px; /* Max width for modal */
+}
+
+.close {
+    color: #aaa; /* Light gray color for close button */
+    float: right; /* Float to the right */
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000; /* Darker color on hover/focus */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Event Details Styling */
+h2 {
+    margin-top: 0; /* Remove top margin for better spacing */
+}
+
+#event-details {
+    font-size: 16px; /* Font size for event details text */
+    line-height: 1.5; /* Improved line height for readability */
+}
+
+/* Add a subtle transition effect when the modal appears */
+.modal-content {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+.close {
+   color:#aaa;
+   float:right;
+   font-size:28px;
+   font-weight:bold;
+}
+.close:hover,
+.close:focuss {
+   color:black;
+   text-decoration:none;
+   cursor:pointer;
+}
+
+/* Calendar styling */
+#calendar-content table {
+   width: 100%;
+   border-collapse: collapse;
+}
+#calendar-content th, #calendar-content td {
+   border: 1px solid #ddd;
+   padding: 10px; 
+}
+#calendar-content th {
+   background-color:#f4f4f4; 
+}
+td:hover {
+   background-color:#e0f7fa; 
+}
+
+</style>
+</head>
+<body>
+  <header>
+    <h1>
+        <a href="index.html">
+            <img src="html source/logo2.PNG" alt="School Logo">
+        </a>
+    </h1>
+    <nav>
+	<div class="navi">
+	<ul>
+	  <li><a href="index.html">Home   </a></li>
+	  <li><a href="news.html">News   </a></li>
+	  <li><a href="faculty.html">Faculty    </a></li>
+	  <li><a href="album.html">Gallery    </a></li>
+	</ul>
+    </div>
+	<div class="nav2">
+    <ul>
+      <li><a href="about us.html">About Us    </a></li>
+      <li><a href="contact us.html">Contacts</a></li>
+    </ul>
+	</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button>Search</button>
+    </div>
+  </nav>
+</header>
+
+    <main>
+        <!-- About, Mission & Vision Container -->
+        <section id="about-mission-vision">
+            <div class="content-container">
+                <h2>About Us</h2>
+                <p>West Rembo Teachers' Compound Learning Center Inc. is a beacon of educational excellence, dedicated to providing high-quality learning experiences for students of all ages and backgrounds. We foster a nurturing and stimulating environment where every student can reach their full potential.</p>
+
+                <h2>Mission & Vision</h2>
+                <div class="mission-vision-container">
+                    <div class="mission-item">
+                        <i class="fas fa-bullseye"></i>
+                        <h3>Mission</h3>
+                        <p>To realize this Vision, WRTCLCI will become a center of excellence in Pre-school education by offering quality and relevant educational programs. We are committed to providing an education that enhances every child's self-confidence and high-esteem with traditional values.</p>
+                    </div>
+
+                    <div class="separator"></div>
+
+                    <div class="vision-item">
+                        <i class="fas fa-eye"></i>
+                        <h3>Vision</h3>
+                        <p>A distinctively well-respected and strong Learning Center for children ages 3 to 5, integrating different learning areas that are interesting and challenging.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- School Calendar Section -->
+        <section id="calendar">
+    <h2>School Calendar</h2>
+    <div class="calendar-container"> <!-- Added container div -->
+        <div id="calendar-controls" aria-label="Calendar Controls">
+            <button id="prev-month" aria-label="Previous Month">&lt;</button>
+            <h3 id="current-month" aria-live="polite"></h3>
+            <button id="next-month" aria-label="Next Month">&gt;</button>
+        </div>
+
+        <!-- Calendar Content -->
+        <div id="calendar-content" role="grid"></div>
+
+        <!-- Modal for Event Details -->
+        <div id="event-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Event Details</h2>
+                <p id="event-details"></p>
+            </div>
+        </div>
+    </div> <!-- End of calendar-container -->
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Our School. All rights reserved.</p>
+    </footer>
+
+    <!-- Include JavaScript -->
+ <script>
+    // Variables for calendar functionality
+    const calendarContent = document.getElementById("calendar-content");
+    const currentMonth = document.getElementById("current-month");
+    const prevMonthBtn = document.getElementById("prev-month");
+    const nextMonthBtn = document.getElementById("next-month");
+    const eventModal = document.getElementById("event-modal");
+    const eventDetails = document.getElementById("event-details");
+    const closeModal = document.querySelector(".close");
+
+    // Variables to handle the current date
+    let date = new Date();
+    let currentYear = date.getFullYear();
+    let currentMonthIndex = date.getMonth();
+
+    // Array of month names
+    const months = [
+        "January", "February", "March", "April", "May", 
+        "June", "July", "August", "September", "October", 
+        "November", "December"
+    ];
+
+    // Function to render the calendar
+    function renderCalendar() {
+        currentMonth.textContent = `${months[currentMonthIndex]} ${currentYear}`;
+
+        // Get first and last days of the current month
+        const firstDay = new Date(currentYear, currentMonthIndex, 1).getDay();
+        const lastDate = new Date(currentYear, currentMonthIndex + 1, 0).getDate();
+
+        // Clear previous calendar content
+        calendarContent.innerHTML = "<table><thead><tr>" +
+            "<th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>" +
+            "</tr></thead><tbody></tbody></table>";
+
+        const tableBody = calendarContent.querySelector("tbody");
+        let date = 1;
+
+        // Loop through 6 weeks (rows) to cover all possible days
+        for (let i = 0; i < 6; i++) {
+            const row = document.createElement("tr");
+
+            for (let j = 0; j < 7; j++) {
+                const cell = document.createElement("td");
+
+                if (i === 0 && j < firstDay) {
+                    // Empty cells for days before the first day of the month
+                    cell.textContent = "";
+                } else if (date > lastDate) {
+                    // Empty cells after the last day of the month
+                    cell.textContent = "";
+                } else {
+                    // Fill with the current date
+                    cell.textContent = date;
+                    cell.dataset.date = `${currentYear}-${currentMonthIndex + 1}-${date}`;
+
+                    // Add click event to display modal with event details
+                    cell.addEventListener("click", () => {
+                        eventDetails.textContent = `Details for event on ${cell.dataset.date}`;
+                        eventModal.style.display = "block";
+                    });
+
+                    date++;
+                }
+
+                row.appendChild(cell);
+            }
+
+            tableBody.appendChild(row);
+        }
+    }
+
+    // Event listeners for navigation buttons
+    prevMonthBtn.addEventListener("click", () => {
+        if (currentMonthIndex === 0) {
+            currentMonthIndex = 11;
+            currentYear--;
+        } else {
+            currentMonthIndex--;
+        }
+        renderCalendar();
+    });
+
+    nextMonthBtn.addEventListener("click", () => {
+        if (currentMonthIndex === 11) {
+            currentMonthIndex = 0;
+            currentYear++;
+        } else {
+            currentMonthIndex++;
+        }
+        renderCalendar();
+    });
+
+    // Event listener for closing the modal
+    closeModal.addEventListener("click", () => {
+        eventModal.style.display = "none";
+    });
+
+    // Close modal when clicking outside the content
+    window.addEventListener("click", (event) => {
+        if (event.target === eventModal) {
+            eventModal.style.display = "none";
+        }
+    });
+
+    // Initialize calendar on page load
+    renderCalendar();
+</script>
+
+
+</body>
+</html>
